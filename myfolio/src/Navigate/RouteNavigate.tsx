@@ -6,6 +6,7 @@ import About from '../Components/About.tsx';
 import Experince from '../Components/Experince.tsx';
 import Contacts from '../Components/Contacts.tsx';
 import Education from '../Components/Education.tsx';
+import TeachnologyStack from '../Components/TeachnologyStack.tsx';
 
 const AppRoutes = () => {  
   return (
@@ -17,6 +18,8 @@ const AppRoutes = () => {
         <Route path="/about" element={<About/>}/>
         <Route path="/experince" element={<Experince/>}/>
         <Route path="/contacts" element={<Contacts/>}/>
+        <Route path="/teachnologyStack" element={<TeachnologyStack/>}/>
+
       </Routes>
     </BrowserRouter>
   );

@@ -3,13 +3,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     padding: 5%;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Dark gradient */
     color: white;
   }
   
-  /* Left Side (Info Section) */
   .InfoContainer {
     flex: 1;
     animation: fadeIn 1.5s ease-in-out;
