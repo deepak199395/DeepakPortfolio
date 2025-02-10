@@ -1,81 +1,38 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import CardActions from "@mui/material/CardActions";
-import Button from "@mui/material/Button";
-import "../Styles/Experience.css";
-import { motion } from "framer-motion";
-import CardMedia from "@mui/material/CardMedia/CardMedia";
-import ibmLogo from "../Assets/ibm-logo-2.png";
-import quessLogo from "../Assets/Quess.jpeg";
-import aspLogo from "../Assets/aps.jpeg";
+import "../Styles/TeachnologyStack.css";
+import giticon from "../Assets/ibm-logo-2.png";
+import reacticon from "../Assets/Quess.jpeg";
+import nodeicon from "../Assets/asplogo.png";
 
-const experiences = [
-  {
-    company: "IBM India Pvt Ltd",
-    role: "React Native Developer",
-    description: "Developed scalable and user-friendly mobile applications.",
-    image: ibmLogo,
 
-  },
-  {
-    company: "Quess Corp Ltd",
-    role: "Mobile App Developer",
-    description: "Built and optimized cross-platform mobile applications.",
-    image: quessLogo,
-
-  },
-  {
-    company: "ASP Tradelinks",
-    role: "Frontend Developer",
-    description: "Developed responsive web applications using React.",
-    image: aspLogo,
-  },
-];
-const Experience = () => {
+const Experince = () => {
   return (
-    <div className="MainContainer">
-      <motion.h2
-        className="title"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        My Experience
-      </motion.h2>
+    <div className="tech-container">
+      <h2 className="tech-title">Work Experince :- 4 year</h2>
+      <div className="stack-icons">
+        <view>
+          <img src={giticon} alt="GitHub" className="icon" />
+          <h3>IBM INDIA PVT LTD</h3>
+          <p>19/04/2024 -current </p>
+        </view>
+        <view>
+          <img src={reacticon} alt="React" className="icon" />
+          <h3>QUESS CORP LTD</h3>
+          <p>june 2023 to dec 2023</p>
 
-      <div className="expBox">
-        {experiences.map((exp, index) => (
-          <motion.div
-            key={index}
-            className="cardContainer"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <Card className="expCard">
-              <CardMedia
-                component="img"
-                alt={exp.company}
-                height="140"
-                image={exp.image}
-                className="cardImage"
-              />
-              <CardContent>
-                <Typography className="company">{exp.company}</Typography>
-                <Typography className="role">{exp.role}</Typography>
-                <Typography className="description">{exp.description}</Typography>
-              </CardContent>
-              <CardActions>
-                <Button className="learnMore">Learn More</Button>
-              </CardActions>
-            </Card>
-          </motion.div>
-        ))}
+
+        </view>
+        <view>
+          <img src={nodeicon} alt="Node.js" className="icon" />
+          <h3>ASP TRADELINKS PVT LTD</h3>
+          <p>jan 2021 to june 2023</p>
+
+
+        </view>
+
       </div>
     </div>
   );
 };
-export default Experience;
+
+export default Experince;
