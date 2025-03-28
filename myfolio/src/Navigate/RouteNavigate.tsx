@@ -7,6 +7,7 @@ import Experince from '../Components/Experince.tsx';
 import Contacts from '../Components/Contacts.tsx';
 import Education from '../Components/Education.tsx';
 import TeachnologyStack from '../Components/TeachnologyStack.tsx';
+import Project from '../Components/Project.tsx';
 
 const AppRoutes = () => {  
   return (

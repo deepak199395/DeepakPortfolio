@@ -4,6 +4,7 @@ import Body from './Body.tsx'
 import Experince from './Experince.tsx'
 import Footer from './Layout/Footer.tsx'
 import TeachnologyStack from './TeachnologyStack.tsx'
+import Project from './Project.tsx'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Body />
       <Experince/>
       <TeachnologyStack/>
+      <Project/>
       <Footer/>
 
     </div>
