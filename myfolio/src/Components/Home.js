@@ -1,10 +1,10 @@
 import React from 'react'
 import Nevbar from './Layout/Nevbar.tsx'
-import Body from './Body.tsx'
-import Experince from './Experince.tsx'
+import Body from './Body.js'
+import Experince from './Experince.js'
 import Footer from './Layout/Footer.tsx'
-import TeachnologyStack from './TeachnologyStack.tsx'
-import Project from './Project.tsx'
+import TeachnologyStack from './TeachnologyStack.js'
+import Project from './Project.js'
 
 const Home = () => {
   return (

@@ -1,13 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from '../Components/Home.tsx';
-import Projects from '../Components/Projects.tsx';
-import About from '../Components/About.tsx';
-import Experince from '../Components/Experince.tsx';
-import Contacts from '../Components/Contacts.tsx';
-import Education from '../Components/Education.tsx';
-import TeachnologyStack from '../Components/TeachnologyStack.tsx';
-import Project from '../Components/Project.tsx';
+import Home from '../Components/Home.js';
+import Projects from '../Components/Projects.js';
+import About from '../Components/About.js';
+import Experince from '../Components/Experince.js';
+import Contacts from '../Components/Contacts.js';
+import Education from '../Components/Education.js';
+import TeachnologyStack from '../Components/TeachnologyStack.js';
 
 const AppRoutes = () => {  
   return (

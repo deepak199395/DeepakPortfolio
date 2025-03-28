@@ -10,9 +10,6 @@ const Project=()=>{
                 <img src={Project1} alt="GitHub" className="icon" />
                 <img src={Project1} alt="GitHub" className="icon" />
                 <img src={Project1} alt="GitHub" className="icon" />
-
-
-        
               </div>
             </div>
           );
