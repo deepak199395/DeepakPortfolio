@@ -1,6 +1,6 @@
 import React from 'react'
-import Nevbar from './Layout/Nevbar.tsx'
-import Footer from './Layout/Footer.tsx'
+import Nevbar from './Layout/Nevbar.js'
+import Footer from './Layout/Footer.js'
 
 const Education = () => {
   return (

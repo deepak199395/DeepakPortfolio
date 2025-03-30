@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Nevbar from "./Layout/Nevbar.tsx";
+import Nevbar from "./Layout/Nevbar.js";
 
 const About = () => {
   return (

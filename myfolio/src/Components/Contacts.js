@@ -1,5 +1,5 @@
 import React from 'react'
-import Nevbar from './Layout/Nevbar.tsx'
+import Nevbar from './Layout/Nevbar.js'
 
 const Contacts = () => {
   return (
