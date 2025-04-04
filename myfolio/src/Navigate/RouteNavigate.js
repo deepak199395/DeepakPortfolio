@@ -7,6 +7,7 @@ import Experince from '../Components/Experince.js';
 import Contacts from '../Components/Contacts.js';
 import Education from '../Components/Education.js';
 import TeachnologyStack from '../Components/TeachnologyStack.js';
+import DashBord from '../Components/DashBord.js';
 
 const AppRoutes = () => {  
   return (
@@ -19,6 +20,8 @@ const AppRoutes = () => {
         <Route path="/experince" element={<Experince/>}/>
         <Route path="/contacts" element={<Contacts/>}/>
         <Route path="/teachnologyStack" element={<TeachnologyStack/>}/>
+        <Route path="/Dashborad" element={<DashBord/>}/>
+
 
       </Routes>
     </BrowserRouter>

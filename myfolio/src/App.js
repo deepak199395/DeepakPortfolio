@@ -7,6 +7,8 @@ import About from './Components/About.js';
 import Experince from './Components/Experince.js';
 import Contacts from './Components/Contacts.js';
 import TechnologyStack from './Components/TeachnologyStack.js';
+import Login from './Components/Login.js';
+import DashBord from './Components/DashBord.js';
 
 const App = () => {
   return (
@@ -19,6 +21,9 @@ const App = () => {
       <Route path="/experince" element={<Experince/>}/>
       <Route path="/contacts" element={<Contacts/>}/>
       <Route path="/teachnologyStack" element={<TechnologyStack/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/dashboard' element={<DashBord/>}/>
+
    </Routes>
   </BrowserRouter>
   )

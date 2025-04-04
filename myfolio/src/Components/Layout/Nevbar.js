@@ -15,6 +15,7 @@ const Nevbar: React.FC = () => {
         <li>  <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
         <li>  <Link to="/contacts" onClick={() => setMenuOpen(false)}>Contacts</Link></li>
         <li>  <Link to="/teachnologyStack" onClick={() => setMenuOpen(false)}>TeachnologyStack</Link></li>
+        <li><Link to="/login" onClick={() => setMenuOpen(false)}>Edit</Link> </li>
 
       </ul>
     </div>
