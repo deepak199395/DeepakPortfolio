@@ -1,36 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../Styles/TeachnologyStack.css";
-import giticon from "../Assets/ibm-logo-2.png";
-import reacticon from "../Assets/Quess.jpeg";
-import nodeicon from "../Assets/asplogo.png";
+
 
 
 const Experince = () => {
+  const [dynamicExperience, setDynamicExperience] = useState([])
+
+  useEffect(() => {
+    const fetchExperience = async () => {
+      try {
+        const res = await fetch('https://shop999backend.vercel.app/api/auth/getexperincedetails');
+        const data = await res.json();
+        console.log(data)
+        if (res.ok) {
+          setDynamicExperience(data.allExperiences)
+        } else {
+          console.error("Failed to fetch experience data");
+
+        }
+      } catch (error) {
+        console.error("Error fetching experience:", error);
+
+      }
+    };
+    fetchExperience();
+
+  }, [])
+
   return (
     <div className="tech-container">
-      <h2 className="tech-title">Work Experince :- 4 year</h2>
-      <div className="stack-icons">
-        <view>
-          <img src={giticon} alt="GitHub" className="icon" />
-          <h3>IBM INDIA PVT LTD</h3>
-          <p>19/04/2024 -current </p>
-        </view>
-        <view>
-          <img src={reacticon} alt="React" className="icon" />
-          <h3>QUESS CORP LTD</h3>
-          <p>june 2023 to dec 2023</p>
-
-
-        </view>
-        <view>
-          <img src={nodeicon} alt="Node.js" className="icon" />
-          <h3>ASP TRADELINKS PVT LTD</h3>
-          <p>jan 2021 to june 2023</p>
-
-
-        </view>
-
-      </div>
+      {dynamicExperience.map((exp) => (
+        <div key={exp._id}>
+          <img
+            src={
+              exp.companylogo.includes("fakepath")
+                ? "https://dummyimage.com/80x80/cccccc/000000&text=Logo"
+                : exp.companylogo
+            }
+            alt={exp.experinceCompany}
+            className="icon"
+          />
+          <h3>{exp.experinceCompany}</h3>
+          <p>
+            {new Date(exp.startdateL).toLocaleDateString()} -{" "}
+            {new Date(exp.enddateL).toLocaleDateString()}
+          </p>
+          <p>{exp.experinceResponsibilities}</p>
+        </div>
+      ))}
     </div>
   );
 };
