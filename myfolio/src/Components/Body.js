@@ -22,7 +22,7 @@ const Body: React.FC = () => {
         transition={{ duration: 1 }}
       >
         <motion.h1 className="fadeIn" whileHover={{ scale: 1.1 }}>Hello, I'm Deepak Yadav</motion.h1>
-        <motion.h2 className="slideIn" whileHover={{ scale: 1.05 }}>React Native Developer</motion.h2>
+        <motion.h2 className="slideIn" whileHover={{ scale: 1.05 }}>MERN STACK  DEVELOPER</motion.h2>
         <motion.p className="fadeIn" whileHover={{ scale: 1.05 }}>
           Passionate about building mobile applications with smooth UI and great performance.
         </motion.p>

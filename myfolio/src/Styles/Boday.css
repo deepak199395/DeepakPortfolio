@@ -3,9 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90vh;
+    height: 55vh;
     padding: 5%;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Dark gradient */
+    background-image: url("../Assets/simple.png");
     color: white;
   }
   

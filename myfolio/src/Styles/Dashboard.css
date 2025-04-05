@@ -1,6 +1,6 @@
 .admin-container {
     display: flex;
-    height: 120vh;
+    height: auto;
     background: linear-gradient(to right, #cdcfd3, #e0dae5);
     position: relative; 
 

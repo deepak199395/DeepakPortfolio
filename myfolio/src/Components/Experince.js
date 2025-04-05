@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "../Styles/TeachnologyStack.css";
+import "../Styles/exp.css"; 
 
-const Experince = () => {
+const Experience = () => {
   const [dynamicExperience, setDynamicExperience] = useState([]);
-  const [loading, setLoading] = useState(true); // Step 1: loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchExperience = async () => {
@@ -18,39 +18,45 @@ const Experince = () => {
       } catch (error) {
         console.error("Error fetching experience:", error);
       } finally {
-        setLoading(false); // Step 3: hide loader after fetch
+        setLoading(false);
       }
     };
     fetchExperience();
   }, []);
 
   return (
-    <div className="tech-container">
+    <div className="experience-section">
+      <h2 className="experience-title">Professional Experience</h2>
       {loading ? (
-        <div className="loader">Loading...</div> // Step 2: loader UI
+        <div className="experience-loader">Loading...</div>
       ) : (
-        dynamicExperience.map((exp) => (
-          <div key={exp._id}>
-            <img
-              src={
-                exp.companylogo.includes("fakepath")
-                  ? "https://dummyimage.com/80x80/cccccc/000000&text=Logo"
-                  : exp.companylogo
-              }
-              alt={exp.experinceCompany}
-              className="icon"
-            />
-            <h3>{exp.experinceCompany}</h3>
-            <p>
-              {new Date(exp.startdateL).toLocaleDateString()} -{" "}
-              {new Date(exp.enddateL).toLocaleDateString()}
-            </p>
-            <p>{exp.experinceResponsibilities}</p>
-          </div>
-        ))
+        <div className="experience-grid">
+          {dynamicExperience.map((exp) => (
+            <div className="experience-card" key={exp._id}>
+              <div className="experience-logo">
+                <img
+                  src={
+                    exp.companylogo.includes("fakepath")
+                      ? "https://dummyimage.com/80x80/cccccc/000000&text=Logo"
+                      : exp.companylogo
+                  }
+                  alt={exp.experinceCompany}
+                />
+              </div>
+              <div className="experience-details">
+                <h3>{exp.experinceCompany}</h3>
+                <p className="experience-dates">
+                  {new Date(exp.startdateL).toLocaleDateString()} -{" "}
+                  {new Date(exp.enddateL).toLocaleDateString()}
+                </p>
+                <p className="experience-role">{exp.experinceResponsibilities}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );
 };
 
-export default Experince;
+export default Experience;
