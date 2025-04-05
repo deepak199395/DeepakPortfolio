@@ -2,7 +2,6 @@ import React from "react";
 import "../Styles/TeachnologyStack.css";
 import giticon from "../Assets/ibm-logo-2.png";
 import reacticon from "../Assets/dmce.png";
-import nodeicon from "../Assets/ASP..png";
 
 
 const Education = () => {
