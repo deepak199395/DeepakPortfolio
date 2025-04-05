@@ -32,11 +32,7 @@ const Experince = () => {
       {dynamicExperience.map((exp) => (
         <div key={exp._id}>
           <img
-            src={
-              exp.companylogo.includes("fakepath")
-                ? "https://dummyimage.com/80x80/cccccc/000000&text=Logo"
-                : exp.companylogo
-            }
+            src={exp.companylogo}
             alt={exp.experinceCompany}
             className="icon"
           />
