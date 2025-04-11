@@ -5,11 +5,8 @@ import { motion } from "framer-motion";
 
 const Body: React.FC = () => {
 
-  const handleDownloadResume = () => {
-    const link = document.createElement("a");
-    link.href = "../../Deepakyadav.pdf";
-    link.download ="Deepakyadav.pdf";
-    link.click();
+  const handleWhatsAppRedirect = () => {
+    window.open("https://wa.me/919876543210", "_blank");
   };
 
   return (
@@ -29,7 +26,7 @@ const Body: React.FC = () => {
         <motion.button
           className="cta-button slideIn"
           whileHover={{ scale: 1.1, backgroundColor: "#ff9800" }}
-          onClick={handleDownloadResume} 
+          onClick={handleWhatsAppRedirect} 
         >
           Hire Me
         </motion.button>
