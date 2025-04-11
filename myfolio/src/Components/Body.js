@@ -6,8 +6,9 @@ import { motion } from "framer-motion";
 const Body: React.FC = () => {
 
   const handleWhatsAppRedirect = () => {
-    window.open("https://wa.me/917045986493", "_blank");
+    window.open("https://wa.me/917045986493?text=Hi%20Deepak%2C%20I%27m%20interested%20in%20hiring%20you!", "_blank");
   };
+  
 
   return (
     <div className="MainContainer">
