@@ -11,8 +11,9 @@
   
   .ibm-logo {
     display: block;
-    width: 860px;
-    height: 300px;
+    width: 100%;
+    max-width: 860px;
+    height: auto;
     margin: 0 auto 1rem auto;
   }
   
@@ -45,5 +46,40 @@
     height: auto;
     border-radius: 8px;
     border: 1px solid #ccc;
+  }
+  
+  /* 🔽 Mobile Responsive Tweaks */
+  @media (max-width: 768px) {
+    .ibm-container {
+      padding: 1rem;
+    }
+  
+    .ibm-title {
+      font-size: 2rem;
+    }
+  
+    .ibm-project {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .ibm-image {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ibm-title {
+      font-size: 1.75rem;
+    }
+  
+    .ibm-section h2 {
+      font-size: 1.25rem;
+    }
+  
+    .ibm-container {
+      padding: 1rem;
+    }
   }
   
