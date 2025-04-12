@@ -161,7 +161,7 @@ const DashBord = () => {
             <button type="submit">Add Project</button>
           </form>
         );
-      case "dashboard": // tech stack
+      case "dashboard": 
         return (
           <form className="admin-form" onSubmit={handleSubmit}>
             <input name="tech" placeholder="Technology" value={data.tech || ""} onChange={handleInputChange} />

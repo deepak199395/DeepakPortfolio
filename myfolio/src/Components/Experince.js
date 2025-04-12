@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../Styles/exp.css"; 
+import { Link } from "react-router-dom";
 
 const Experience = () => {
   const [dynamicExperience, setDynamicExperience] = useState([]);
@@ -32,6 +33,7 @@ const Experience = () => {
       ) : (
         <div className="experience-grid">
           {dynamicExperience.map((exp) => (
+            <Link to={`/ibm/`} key={exp._id} className="experience-card">
             <div className="experience-card" key={exp._id}>
               <div className="experience-logo">
                 <img
@@ -52,6 +54,8 @@ const Experience = () => {
                 <p className="experience-role">{exp.experinceResponsibilities}</p>
               </div>
             </div>
+            </Link>
+            
           ))}
         </div>
       )}
