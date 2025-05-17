@@ -9,7 +9,7 @@ const Experience = () => {
   useEffect(() => {
     const fetchExperience = async () => {
       try {
-        const res = await fetch('https://shop999backend.vercel.app/api/auth/getexperincedetails');
+        const res = await fetch('https://shop999backend.vercel.app/back-end/rest-API/Secure/api/v1/experiences/GetExperience-list/api13');
         const data = await res.json();
         if (res.ok) {
           setDynamicExperience(data.allExperiences);
