@@ -45,7 +45,7 @@ const DashBord = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://shop999backend.vercel.app/api/auth/experince",
+      const response = await fetch("https://shop999backend.vercel.app/back-end/rest-API/Secure/api/v1/experiences/Create-Experience/api12",
         {
           method: "POST",
           headers: {
